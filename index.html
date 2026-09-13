@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="titleBox">
+            <h1 class="title">pomodoro</h1>
+        </div>
+
+        <div class="breakTypes">
+            <form class="typeform">
+                <label>
+                    <input type="radio" name="break" data-value="pomodoro" checked>
+                    <p class="breakName">pomodoro</p>
+                </label>
+                <label>
+                    <input type="radio" name="break" data-value="short">
+                    <p class="breakName">short break</p>
+                </label>
+                <label>
+                    <input type="radio" name="break" data-value="long">
+                    <p class="breakName">long break</p>
+                </label>
+            </form>
+        </div>
+
+        <div class="main-div">
+            <div class="subdiv">
+                <div class="subsubdiv">
+                    <div class="time">
+                        <span class="timenum">00</span>
+                        <span>:</span>
+                        <span class="timenum">00</span>
+                        <p class="timeText">start</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="settingsBtn" id="settingsBtn">
+            <img src="./assets/settings.svg" alt="settingsBtn">
+        </button>
+    </div>
+
+    <div class="modal hidden">
+        <div class="modalTitle">
+            <h1>Settings</h1>
+            <button type="button" class="closeBtn" id="closeBtn">
+                <img src="./assets/x.svg" alt="exitBtn">
+            </button>
+        </div>
+
+        <div class="titleLine"></div>
+
+
+        <h3>TIME (MINUTES)</h3>
+
+
+        <div class="modalBox">
+            <div class="modalBox-time">
+                <div class="minute">
+                    <p class="textSet">pomodoro</p>
+                    <div class="inp">
+                        <input data-name="pomodoro" id="pomodoro" name="timeVal" type="text" value="25">
+                        <div class="navigations">
+                            <button type="button" class="upArrow">
+                                <img src="./assets/upArrow.svg" alt="upArrow">
+                            </button>
+                            <button type="button" class="downArrow">
+                                <img class="down" src="./assets/upArrow.svg" alt="downArrow">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="minute">
+                    <p class="textSet">short break</p>
+                    <div class="inp">
+                        <input data-name="short" id="shortBreak" name="timeVal" type="text" value="5">
+                        <div class="navigations">
+                            <button type="button" class="upArrow">
+                                <img src="./assets/upArrow.svg" alt="upArrow">
+                            </button>
+                            <button type="button" class="downArrow">
+                                <img class="down" src="./assets/upArrow.svg" alt="downArrow">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="minute">
+                    <p class="textSet">long break</p>
+                    <div class="inp">
+                        <input data-name="long" id="longBreak" name="timeVal" type="text" value="15">
+                        <div class="navigations">
+                            <button type="button" class="upArrow">
+                                <img src="./assets/upArrow.svg" alt="upArrow">
+                            </button>
+                            <button type="button" class="downArrow">
+                                <img class="down" src="./assets/upArrow.svg" alt="downArrow">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="line"></div>
+
+            <div class="fontcolor">
+                <p class="text">font</p>
+                <div class="logo font">
+                    <label class="kumbh">
+                        <input type="radio" name="font" data-fontname="kumbhSans" checked>
+                        <span>Aa</span>
+                    </label>
+
+                    <label class="roboto">
+                        <input type="radio" name="font" data-fontname="robotoSlab">
+                        <span>Aa</span>
+                    </label>
+
+                    <label class="space">
+                        <input type="radio" name="font" data-fontname="spaceMono">
+                        <span>Aa</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="fontcolor">
+                <p class="text">color</p>
+                <div class="logo color">
+                    <label class="red">
+                        <input type="radio" data-colorname="colorRed" name="color" checked>
+                        <img src="./assets/true.svg" alt="true">
+                    </label>
+
+                    <label class="turqoise">
+                        <input type="radio" data-colorname="colorTurqoise" name="color">
+                        <img src="./assets/true.svg" alt="true">
+                    </label>
+
+                    <label class="lavender">
+                        <input type="radio" data-colorname="colorLavender" name="color">
+                        <img src="./assets/true.svg" alt="true">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="applyBtn" id="applyBtn">Apply</button>
+
+    </div>
+
+    <div class="overlay hidden"></div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
