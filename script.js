@@ -220,12 +220,14 @@ const numBtnFunc = (nodeList, plusminus) => {
             let val = Number(nodeItem.parentElement.parentElement.querySelector('input').value);
             if (plusminus === '+' && val < 99) {
                 nodeItem.parentElement.parentElement.querySelector('input').value = String(val + 1);
+                tempTime[nodeItem.parentElement.parentElement.querySelector('input').dataset.name] = Number(nodeItem.parentElement.parentElement.querySelector('input').value) * 60;
             } else if (plusminus === '-' && val > 0) {
                 nodeItem.parentElement.parentElement.querySelector('input').value = String(val - 1);
+                tempTime[nodeItem.parentElement.parentElement.querySelector('input').dataset.name] = Number(nodeItem.parentElement.parentElement.querySelector('input').value) * 60;
             }
         })
     })
 };
 
-numBtnFunc( ups, '+');
+numBtnFunc(ups, '+');
 numBtnFunc(downs, '-');
