@@ -37,7 +37,7 @@ body {
     }
 
     .breakName {
-        padding: 16px 23px 14px 23px;
+        padding: 16px 24.41px 16px 22.79px;
         letter-spacing: 0;
         font-size: 12px;
     }
@@ -465,10 +465,6 @@ input:focus {
         align-items: center;
     }
 
-    .spaceMono .breakName {
-        font-size: 8px;
-    }
-
     form input:checked~p {
         padding: 16px 23px 14px 23px;
     }
@@ -530,12 +526,23 @@ input:focus {
     }
 
     .breakTypes {
-        max-width: 300px;
+        width: 350px;
+    }
+
+    .spaceMono .breakTypes {
+        width: 370px;
     }
 
     .breakName {
         white-space: nowrap;
-        font-size: 8px;
+        padding: 16px 24.41px 16px 22.79px;
+        font-size: 12px;
+    }
+
+    .typeform label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .main-div {
