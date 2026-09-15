@@ -39,7 +39,7 @@ body {
     .breakName {
         padding: 16px 23px 14px 23px;
         letter-spacing: 0;
-        font-size: 9px;
+        font-size: 12px;
     }
 
 }
@@ -460,8 +460,13 @@ input:focus {
     .container {
         max-width: 300px !important;
         display: flex;
+        margin: 0;
         flex-direction: column;
         align-items: center;
+    }
+
+    .spaceMono .breakName {
+        font-size: 8px;
     }
 
     form input:checked~p {
@@ -532,6 +537,7 @@ input:focus {
         white-space: nowrap;
         font-size: 8px;
     }
+
     .main-div {
         transform: scale(0.7);
     }
